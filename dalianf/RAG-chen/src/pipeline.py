@@ -242,9 +242,36 @@ class Pipeline:
         print(f"BM25 database created at {output_file}")
     
     def parse_pdf_reports(self, parallel: bool = True, chunk_size: int = 2, max_workers: int = 10):
-        # 解析PDF报告，支持并行处理
-        if parallel:
-            self.parse_pdf_reports_parallel(chunk_size=chunk_size, max_workers=max_workers)
+        """Parse PDF reports with better error handling and memory management"""
+        try:
+            # Set lower memory usage limits
+            os.environ['DOCLING_MAX_MEMORY'] = '2048'
+            os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+            os.environ['OMP_NUM_THREADS'] = '1'
+            os.environ['MKL_NUM_THREADS'] = '1'
+            
+            if parallel:
+                # Try parallel with reduced settings
+                self.parse_pdf_reports_parallel(chunk_size=1, max_workers=2)
+            else:
+                # Fallback to sequential processing
+                pdf_parser = PDFParser(
+                    output_dir=self.paths.parsed_reports_path,
+                    csv_metadata_path=self.paths.subset_path
+                )
+                input_doc_paths = list(self.paths.pdf_reports_dir.glob("*.pdf"))
+                # Process in chunks even in sequential mode
+                for i in range(0, len(input_doc_paths), chunk_size):
+                    chunk = input_doc_paths[i:i + chunk_size]
+                    pdf_parser.parse_and_export(chunk)
+                
+        except Exception as e:
+            logging.error(f"Error during PDF parsing: {str(e)}")
+            raise
+        finally:
+            # Force garbage collection
+            import gc
+            gc.collect()
 
     def process_parsed_reports(self):
         """
