@@ -88,17 +88,9 @@ class VectorDBIngestor:
                 model=TextEmbedding.Models.text_embedding_v1,
                 input=batch
             )
-            # print('i=',i)
-            # print('resp=',resp)
-            # with open(LOG_FILE, 'a', encoding='utf-8') as f:
-            #     f.write('i='+str(i)+'\n')
-            #     f.write('resp='+str(resp)+'\n')
-            # 兼容单条和多条输入
-            #print('resp=',resp)
-            # with open(LOG_FILE, 'a', encoding='utf-8') as f:
-            #     f.write('resp='+str(resp)+'\n')
+          
             if 'output' in resp and 'embeddings' in resp['output']:
-                print('11111111')
+                print('embedding start')
                 for emb in resp['output']['embeddings']:
                     if emb['embedding'] is None or len(emb['embedding']) == 0:
                         error_text = batch[emb.text_index] if hasattr(emb, 'text_index') else None
@@ -108,7 +100,7 @@ class VectorDBIngestor:
                     embeddings.append(emb['embedding'])
             elif 'output' in resp and 'embedding' in resp['output']:
                 if resp['output']['embedding'] is None or len(resp['output']['embedding']) == 0:
-                    print('22222222')
+                    print("DashScope返回的embedding为空，text_index={getattr(emb, 'text_index', None)}，文本内容已写入 {LOG_FILE}")
                     with open(LOG_FILE, 'a', encoding='utf-8') as f:
                         f.write("DashScope返回的embedding为空，文本内容如下：\n{}\n{}\n".format(batch[0] if batch else None, '-'*60))
                     raise RuntimeError("DashScope返回的embedding为空，文本内容已写入 {}".format(LOG_FILE))
