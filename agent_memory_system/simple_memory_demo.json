@@ -1,0 +1,195 @@
+{
+  "short_term": [
+    {
+      "id": "mem_1756517870670",
+      "content": "Agent: I'll remember that you prefer painting over drawing!",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517870.6702359,
+      "access_count": 0,
+      "last_accessed": 1756517870.6702359,
+      "context": {
+        "user_id": "user_diana",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517870975",
+      "content": "Agent: I don't think you've told me your name yet.",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517870.975594,
+      "access_count": 0,
+      "last_accessed": 1756517870.975594,
+      "context": {
+        "user_id": "user_diana",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517871278",
+      "content": "Agent: Based on our conversations, you've mentioned: I prefer painting over drawing",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517871.278801,
+      "access_count": 0,
+      "last_accessed": 1756517871.278801,
+      "context": {
+        "user_id": "user_diana",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517871584",
+      "content": "Agent: I hear you saying 'I also like programming in Python'. This is the first time we've discussed this topic.",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517871.5843148,
+      "access_count": 0,
+      "last_accessed": 1756517871.5843148,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517871886",
+      "content": "Agent: I'll remember that you what do like to do?!",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517871.886976,
+      "access_count": 0,
+      "last_accessed": 1756517871.886976,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    }
+  ],
+  "long_term": [
+    {
+      "id": "mem_1756517869153",
+      "content": "Agent: I'll remember that you like playing chess!",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517869.153953,
+      "access_count": 0,
+      "last_accessed": 1756517869.153953,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517869761",
+      "content": "Agent: I'll remember that you enjoy reading science fiction books!",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517869.761465,
+      "access_count": 0,
+      "last_accessed": 1756517869.761465,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517870066",
+      "content": "Agent: I'll remember that you what do like?!",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517870.066814,
+      "access_count": 0,
+      "last_accessed": 1756517870.066814,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517868848",
+      "content": "Agent: Nice to meet you, Charlie! I'll remember your name.",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517868.848758,
+      "access_count": 0,
+      "last_accessed": 1756517868.848758,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517870670",
+      "content": "User preference: I prefer painting over drawing",
+      "memory_type": "long_term",
+      "priority": 3,
+      "timestamp": 1756517870.67023,
+      "access_count": 0,
+      "last_accessed": 1756517870.67023,
+      "context": {
+        "user_id": "user_diana",
+        "type": "preference"
+      },
+      "tags": [
+        "preference",
+        "user"
+      ]
+    },
+    {
+      "id": "mem_1756517869459",
+      "content": "Agent: I don't think you've told me your name yet.",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517869.45955,
+      "access_count": 0,
+      "last_accessed": 1756517869.45955,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517870369",
+      "content": "Agent: I hear you saying 'Hi, I'm Diana'. This is the first time we've discussed this topic.",
+      "memory_type": "long_term",
+      "priority": 2,
+      "timestamp": 1756517870.3699,
+      "access_count": 0,
+      "last_accessed": 1756517870.3699,
+      "context": {
+        "user_id": "user_diana",
+        "type": "agent_response"
+      },
+      "tags": []
+    },
+    {
+      "id": "mem_1756517871886",
+      "content": "User preference: What do I like to do?",
+      "memory_type": "long_term",
+      "priority": 3,
+      "timestamp": 1756517871.886967,
+      "access_count": 0,
+      "last_accessed": 1756517871.886967,
+      "context": {
+        "user_id": "user_charlie",
+        "type": "preference"
+      },
+      "tags": [
+        "preference",
+        "user"
+      ]
+    }
+  ],
+  "session_id": "session_1756517868"
+}

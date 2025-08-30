@@ -1,0 +1,89 @@
+{
+  "short_term": [
+    {
+      "id": "e27783d9-e6bd-4c39-a861-66e96ce80364",
+      "content": "User said: Hello, my name is Alice",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517878.86689,
+      "access_count": 0,
+      "last_accessed": 1756517878.86689,
+      "context": {
+        "user_id": "user1",
+        "type": "user_message"
+      },
+      "embedding": null,
+      "summary": null,
+      "tags": []
+    },
+    {
+      "id": "3e916344-fda1-4def-9413-9b58d73e36da",
+      "content": "Agent responded: Processed: Hello, my name is Alice. Context: 0 memories retrieved.",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517878.866902,
+      "access_count": 0,
+      "last_accessed": 1756517878.866902,
+      "context": {
+        "user_id": "user1",
+        "type": "agent_response"
+      },
+      "embedding": null,
+      "summary": null,
+      "tags": []
+    },
+    {
+      "id": "40ceb173-6fd7-4532-8f0e-96d0dbb05faa",
+      "content": "User said: What's my name?",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517878.8669171,
+      "access_count": 0,
+      "last_accessed": 1756517878.8669171,
+      "context": {
+        "user_id": "user1",
+        "type": "user_message"
+      },
+      "embedding": null,
+      "summary": null,
+      "tags": []
+    },
+    {
+      "id": "16b2b0c5-1256-4f72-b330-7ae29900811a",
+      "content": "Agent responded: Processed: What's my name?. Context: 0 memories retrieved.",
+      "memory_type": "short_term",
+      "priority": 2,
+      "timestamp": 1756517878.866925,
+      "access_count": 0,
+      "last_accessed": 1756517878.866925,
+      "context": {
+        "user_id": "user1",
+        "type": "agent_response"
+      },
+      "embedding": null,
+      "summary": null,
+      "tags": []
+    }
+  ],
+  "long_term": [
+    {
+      "id": "6fe32ae1-6132-4f78-838a-2612cec486fc",
+      "content": "Learned: User Alice prefers Python programming from observation: User mentioned they like Python",
+      "memory_type": "long_term",
+      "priority": 3,
+      "timestamp": 1756517878.866935,
+      "access_count": 0,
+      "last_accessed": 1756517878.866935,
+      "context": {
+        "session": "70daf2aa-61f0-4509-ae19-74a0178aff70"
+      },
+      "embedding": null,
+      "summary": null,
+      "tags": [
+        "learning",
+        "important"
+      ]
+    }
+  ],
+  "current_session": "70daf2aa-61f0-4509-ae19-74a0178aff70"
+}

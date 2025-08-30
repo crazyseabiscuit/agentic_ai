@@ -57,7 +57,10 @@ class MemoryEntry:
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for serialization"""
-        return asdict(self)
+        data = asdict(self)
+        data['memory_type'] = self.memory_type.value
+        data['priority'] = self.priority.value
+        return data
     
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'MemoryEntry':
